@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
  
-<project name="tomcat-ci-ant" default="full-suite" basedir=".">
+<project name="tomcat-ci-ant" default="info" basedir=".">
   <target name= "info">
    <echo> Welcome to Ant! </echo>
  </target>
