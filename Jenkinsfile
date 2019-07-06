@@ -16,5 +16,13 @@
                 }
             }
 }
+        stage ('Compile Test') {
+
+            steps {
+                withMaven(maven : 'mvn_home') {
+                    sh 'mvn test'
+                }
+            }
+}
 }
 }
