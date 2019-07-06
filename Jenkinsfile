@@ -11,7 +11,7 @@
         stage ('Compile Stage') {
 
             steps {
-                withMaven(maven : 'LocalMaven') {
+                withMaven(maven : 'mvn_home') {
                     sh 'mvn clean compile'
                 }
             }
