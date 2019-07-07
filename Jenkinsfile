@@ -43,8 +43,8 @@
          stage (' Deploy Stage') {
 
             steps {
-                withMaven(maven : 'mvn_home') {
-                    sh 'mvn deploy'
+                sshagent (credentials: ['a42942cf-8457-4e1e-9331-14499717b85a']) {
+                  sh 'scp -o StrictHostKeyChecking=no **/*.war  ec2-user@172.31.20.99:/usr/share/tomcat/webapp/'
                 }
             }
 }
