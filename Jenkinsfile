@@ -16,11 +16,18 @@
                 }
             }
 }
-        stage ('Compile Test') {
+        stage (' Test Stage') {
 
             steps {
                 withMaven(maven : 'mvn_home') {
                     sh 'mvn test'
+                }
+            }
+         stage (' package Stage') {
+
+            steps {
+                withMaven(maven : 'mvn_home') {
+                    sh 'mvn package'
                 }
             }
 }
