@@ -31,6 +31,14 @@
                     sh 'mvn package'
                 }
             }
+          }
+         stage (' install Stage') {
+
+            steps {
+                withMaven(maven : 'mvn_home') {
+                    sh 'mvn clean install'
+                }
+            }
 }
 }
 }
