@@ -39,6 +39,14 @@
                     sh 'mvn clean install'
                 }
             }
+          }
+         stage (' Deploy Stage') {
+
+            steps {
+                withMaven(maven : 'mvn_home') {
+                    sh 'mvn deploy'
+                }
+            }
 }
 }
 }
