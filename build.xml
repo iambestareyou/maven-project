@@ -13,7 +13,7 @@
     </target>
      
     <target name="compile" depends="init" >
-        <javac destdir="webapp" debug="true" srcdir="src">
+        <javac destdir="webapp" debug="true" srcdir="webapp/src">
             <classpath refid="compile.classpath"/>
         </javac>
     </target>
