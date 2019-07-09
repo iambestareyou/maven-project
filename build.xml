@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<project name="tomcat-ci-ant" default="war">
+<project name="pipeline-ant" default="war">
  
     <path id="compile.classpath">
         <fileset dir="WebContent/WEB-INF/lib">
