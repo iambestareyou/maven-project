@@ -13,7 +13,7 @@
 
             steps {
                 withAnt(installation: 'ant_path') {
-                    sh 'ant build.xml'
+                    sh 'ant'
                 }
             }
 }
