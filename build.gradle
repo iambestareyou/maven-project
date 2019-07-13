@@ -1,0 +1,5 @@
+war {
+    from 'webapp/src/main/webapp/' // adds a file-set to the root of the archive
+    webInf { from 'webapp/src/main/webapp/WEB-INF/' } // adds a file-set to the WEB-INF dir.
+    webXml = file('webapp/src/main/webapp/WEB-INF/web.xml ') // copies a file to WEB-INF/web.xml
+}
