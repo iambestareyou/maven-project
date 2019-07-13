@@ -1,0 +1,30 @@
+pipeline {
+    agent any
+
+
+    stages {
+        stage('SCM Checkout'){
+          git 'https://github.com/prakashk0301/maven-project'
+        }
+  }
+    {
+        stage ('Compile Stage') {
+        
+
+            steps {
+                withAnt(installation: 'ant_path') {
+                    sh 'ant'
+                }
+            }
+}
+
+        stage (' Deploy Stage') {
+
+            steps {
+                sshagent (credentials: ['a42942cf-8457-4e1e-9331-14499717b85a']) {
+                  sh 'scp -o StrictHostKeyChecking=no *.war  ec2-user@172.31.11.9:/opt/wildfly/standalone/deployments'
+                }
+            }
+}
+}
+}
